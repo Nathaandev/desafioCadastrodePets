@@ -7,7 +7,6 @@
     <list default="true" id="bf4fc3af-33d3-497c-88f8-6dbee9240e6c" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Exceptions/ApiExceptionHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Response/ExceptionMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cadastro de Pets/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Controller/CadastroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Controller/CadastroController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Model/CadastroModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Model/CadastroModel.java" afterDir="false" />
@@ -88,7 +87,7 @@
       <recent name="com.example.cadastropet.Service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ExceptionsCheckTest">
+  <component name="RunManager" selected="Spring Boot.CadastropetApplication">
     <configuration name="CadastroServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cadastropet" />
       <extension name="coverage">
@@ -208,7 +207,7 @@
       <workItem from="1748637455314" duration="2308000" />
       <workItem from="1748650004644" duration="5008000" />
       <workItem from="1748897317741" duration="14020000" />
-      <workItem from="1748971233124" duration="6745000" />
+      <workItem from="1748971233124" duration="7611000" />
     </task>
     <servers />
   </component>

@@ -34,13 +34,6 @@ public class CadastroService {
         cadastroModel.setName(cadastroModel.GenerateName());
         return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(cadastroModel));
     }
-    public ResponseEntity<List<CadastroModel>> getAll(){
-        List<CadastroModel> pets = repository.findAll();
-        if(pets.isEmpty()){
-            return ResponseEntity.noContent().build();
-        }
-        return ResponseEntity.ok(pets);
-    }
     public ResponseEntity<Object> DeleteById(Long id){
         var pet = repository.findById(id);
         if (pet.isEmpty()) {
