@@ -8,6 +8,7 @@
       <change afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Exceptions/ApiExceptionHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Response/ExceptionMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cadastro de Pets/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Controller/CadastroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Controller/CadastroController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Model/CadastroModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Model/CadastroModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Repository/CadastroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Repository/CadastroRepository.java" afterDir="false" />
@@ -29,6 +30,7 @@
       <list>
         <option value="Class" />
         <option value="Exception" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -48,29 +50,105 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.CadastropetApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/natab/Projetos",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.CadastroServiceTest.FindAll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CadastroServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CadastropetApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExceptionsCheckTest.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.CadastropetApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/natab/Projetos&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.cadastropet.Exceptions" />
+      <recent name="com.example.cadastropet.Service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CadastropetApplication">
+    <configuration name="CadastroServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadastropet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.cadastropet.Service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.cadastropet.Service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.cadastropet.Service.CadastroServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CadastroServiceTest.FindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadastropet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.cadastropet.Service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.cadastropet.Service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.cadastropet.Service.CadastroServiceTest" />
+      <option name="METHOD_NAME" value="FindAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CadastropetApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadastropet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.cadastropet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.cadastropet" />
+      <option name="MAIN_CLASS_NAME" value="com.example.cadastropet.CadastropetApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExceptionsCheckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadastropet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.cadastropet.Exceptions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.cadastropet.Exceptions" />
+      <option name="MAIN_CLASS_NAME" value="com.example.cadastropet.Exceptions.ExceptionsCheckTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CadastropetApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cadastropet" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.cadastropet.CadastropetApplication" />
@@ -78,6 +156,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ExceptionsCheckTest" />
+        <item itemvalue="JUnit.CadastroServiceTest" />
+        <item itemvalue="JUnit.CadastropetApplicationTests" />
+        <item itemvalue="JUnit.CadastroServiceTest.FindAll" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -111,6 +197,16 @@
       <workItem from="1747867292424" duration="7507000" />
       <workItem from="1747951613426" duration="2128000" />
       <workItem from="1748030514499" duration="17738000" />
+      <workItem from="1748292729334" duration="7999000" />
+      <workItem from="1748357076083" duration="597000" />
+      <workItem from="1748366652366" duration="3871000" />
+      <workItem from="1748395452276" duration="1192000" />
+      <workItem from="1748436133189" duration="3640000" />
+      <workItem from="1748525709771" duration="5805000" />
+      <workItem from="1748553989275" duration="6928000" />
+      <workItem from="1748637455314" duration="2308000" />
+      <workItem from="1748650004644" duration="5008000" />
+      <workItem from="1748897317741" duration="4960000" />
     </task>
     <servers />
   </component>

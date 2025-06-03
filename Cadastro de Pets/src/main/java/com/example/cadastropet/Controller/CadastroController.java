@@ -32,7 +32,7 @@ public class CadastroController {
     @PostMapping("/cadastro")
     //Indicates that this method will be executed when the endpoint /products is called with the method HTTP Post
     public ResponseEntity<CadastroModel> save(@RequestBody @Valid CadastroRecordDTO cadastroRecordDTO){
-        return service.saveProduct(cadastroRecordDTO);
+        return service.save(cadastroRecordDTO);
     }
     //Get all
     @GetMapping("/GetAll")

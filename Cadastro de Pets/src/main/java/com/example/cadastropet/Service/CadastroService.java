@@ -3,6 +3,7 @@ import com.example.cadastropet.Enum.CatOrDog;
 import com.example.cadastropet.Enum.MascOrFem;
 import com.example.cadastropet.Exceptions.AgeHigherThan19Exception;
 import com.example.cadastropet.Exceptions.ExceptionsCheck;
+import com.example.cadastropet.Exceptions.InvalidPutMethodException;
 import com.example.cadastropet.Model.CadastroModel;
 import com.example.cadastropet.Repository.CadastroRepository;
 import com.example.cadastropet.dtos.CadastroRecordDTO;
@@ -24,30 +25,24 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import static com.example.cadastropet.Model.CadastroModel.VALUE_NOT_INFORMED;
+
 @Service
 public class CadastroService {
+    int active_filters = 0;
     CadastroModel cadastroModel;
-    static final String VALUE_NOT_INFORMED = "NOT INFORMED";
     @Autowired
     CadastroRepository repository;
     ExceptionsCheck exceptionsCheck = new ExceptionsCheck();
 
-    public ResponseEntity<CadastroModel> saveProduct(@RequestBody @Valid CadastroRecordDTO cadastroRecordDTO){
+    public ResponseEntity<CadastroModel> save(@RequestBody @Valid CadastroRecordDTO cadastroRecordDTO){
         var cadastroModel = new CadastroModel();
         BeanUtils.copyProperties(cadastroRecordDTO, cadastroModel);
-        if (cadastroModel.getRace().trim().isEmpty()){ cadastroModel.setRace(VALUE_NOT_INFORMED);}
-        if (cadastroRecordDTO.number().trim().isEmpty()){ cadastroModel.setNumber(VALUE_NOT_INFORMED);}
-        if (cadastroModel.getWeight().trim().isEmpty()){ cadastroModel.setWeight(VALUE_NOT_INFORMED);}
-        if (cadastroModel.getAge().trim().isEmpty()){ cadastroModel.setAge(VALUE_NOT_INFORMED);}
-
+        cadastroModel.HandleEmptyFields(cadastroRecordDTO);
         exceptionsCheck.CheckExceptionsSave(cadastroRecordDTO, cadastroModel);
-        cadastroModel.setAddress(cadastroRecordDTO.street() + ", " + cadastroRecordDTO.number() + " - " + cadastroRecordDTO.city());
-        String name = cadastroModel.getFirstname() + " " + cadastroModel.getLastname();
-        cadastroModel.setName(name);
-        cadastroModel.setFirstname(cadastroModel.getFirstname());
-        cadastroModel.setLastname(cadastroModel.getLastname());
+        cadastroModel.setAddress(cadastroModel.GenerateFullAddress());
+        cadastroModel.setName(cadastroModel.GenerateName());
         return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(cadastroModel));
-
     }
     public ResponseEntity<List<CadastroModel>> getAll(){
         List<CadastroModel> pets = repository.findAll();
@@ -55,26 +50,6 @@ public class CadastroService {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(pets);
-    }
-    public ResponseEntity<?> getById(Long id){
-        var pet = repository.findById(id);
-        if(pet.isEmpty()){
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("There is no pet with such id");
-        }
-        return ResponseEntity.ok(pet.get());
-    }
-    public ResponseEntity<List<CadastroModel>> getByGender(MascOrFem gender){
-        List<CadastroModel> pets = repository.findByGender(gender);
-        if(pets.isEmpty()){
-            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-        }
-        return ResponseEntity.ok(pets);
-    }
-    public ResponseEntity<List<CadastroModel>> getByType(CatOrDog type){
-        List<CadastroModel> pets = repository.findByType(type);
-        if(pets.isEmpty()){
-            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-        } return ResponseEntity.ok(pets);
     }
     public ResponseEntity<Object> DeleteById(Long id){
         var pet = repository.findById(id);
@@ -88,13 +63,14 @@ public class CadastroService {
         if(pet.isEmpty()){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
-        var atualizar = pet.get();
-        BeanUtils.copyProperties(cadastroRecordDTO, atualizar);
-        return ResponseEntity.status(HttpStatus.OK).body(repository.save(atualizar));
-    }
+        var update = pet.get();
+        exceptionsCheck.CheckPutMethodException(update.getType(), update.getGender(), cadastroRecordDTO);
+        BeanUtils.copyProperties(cadastroRecordDTO, update);
 
+        return ResponseEntity.status(HttpStatus.OK).body(repository.save(update));
+    }
     public ResponseEntity<List<CadastroModel>> GetPets(Long id, String firstname, String lastname, String address, String weight, String age, String gender, String type, String race){
-        int active_filters = 0;
+
         List<CadastroModel> pets = repository.findAll();
         List<CadastroModel> filters = pets.stream()
                 .filter(p -> id == null || p.getPetid().equals(id))
