@@ -28,7 +28,7 @@ Aqui você pode criar, listar, atualizar e excluir registros de pets através de
 
 ## 🚀 Como Rodar o Projeto
 
-### 🐳 Usando Docker para o Banco + Maven Local para a Aplicação
+### 🐳 Usando Docker para o Banco
 
 1. 🔥 Clone este repositório:
    ```bash
