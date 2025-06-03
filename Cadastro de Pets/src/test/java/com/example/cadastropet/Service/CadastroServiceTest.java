@@ -42,16 +42,16 @@ class CadastroServiceTest {
     void FindAll() {
         CadastroModel cadastroModel = new CadastroModel(7L, "Tralala", "52",
                 "11", "Nathan", "Carlos", "12",
-                "Rio de Janeiro", "Estrada do Mendanha", Dog, Masc);
-        CadastroModel cadastroModel2 = new CadastroModel(7L, "Tralala", "52", "11", "Nathan", "Carlos", "12", "Rio de Janeiro", "Estrada do Mendanha", Dog, Masc);
+                "Rio de Janeiro", "Rua da Paixão", Dog, Masc);
+        CadastroModel cadastroModel2 = new CadastroModel(7L, "Tralala", "52", "11", "Nathan", "Carlos", "12", "Rio de Janeiro", "Rua da Paixão", Dog, Masc);
         Mockito.when(cadastroRepository.findAll()).thenReturn(Arrays.asList(cadastroModel, cadastroModel2));
         List<CadastroModel> cadastros = cadastroService.getAll().getBody();
         Assertions.assertEquals(2, cadastros.size());
     }
     @Test
     void save(){
-        CadastroRecordDTO dto = new CadastroRecordDTO("Nathan", "Mendes", "tralala", "Estrada do Mendanha", "476", "Rj", "12", Dog, Masc, "12");
-        CadastroModel cadastroModel = new CadastroModel(null, "Tralala", "0.2", "11", "Nathan", "Carlos", "12", "Rio de Janeiro", "Estrada do Mendanha", Dog, Masc);
+        CadastroRecordDTO dto = new CadastroRecordDTO("Nathan", "Mendes", "tralala", "Rua da Paixão", "476", "Rj", "12", Dog, Masc, "12");
+        CadastroModel cadastroModel = new CadastroModel(null, "Tralala", "0.2", "11", "Nathan", "Carlos", "12", "Rio de Janeiro", "Rua da paixão", Dog, Masc);
         Mockito.when(cadastroRepository.save(Mockito.any(CadastroModel.class))).thenReturn(cadastroModel);
         var result = cadastroService.save(dto);
         Assertions.assertEquals(cadastroModel, result.getBody());
@@ -65,10 +65,11 @@ class CadastroServiceTest {
     }
     @Test
     void update(){
+        CadastroRecordDTO dto = new CadastroRecordDTO("Nathan", "Mendes", "tralala", "Rua da Paixão", "476", "Rj", "12", Dog, Masc, "12");
         Long id = 1L;
         Mockito.when(cadastroRepository.findById(id)).thenReturn(java.util.Optional.ofNullable(cadastroModel));
         Mockito.when(cadastroRepository.save(Mockito.any(CadastroModel.class))).thenReturn(cadastroModel);
-        var result = cadastroService.Update(id, cadastroRecordDTO);
+        var result = cadastroService.Update(id, dto);
         Assertions.assertEquals(cadastroModel, result.getBody());
     }
     @BeforeEach

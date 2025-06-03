@@ -42,4 +42,11 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
         ExceptionMessage exceptionMessage = new ExceptionMessage(new Date(), exceptionDescription, exception);
         return new ResponseEntity<>(exceptionMessage, new HttpHeaders(), HttpStatus.UNPROCESSABLE_ENTITY);
     }
+    @ExceptionHandler(value = FilterMaxQuantityException.class)
+    public ResponseEntity<Object> FilterMaxQuantity(Exception e, WebRequest request){
+        String exception = e.getClass().getSimpleName();
+        String exceptionDescription = e.getLocalizedMessage();
+        ExceptionMessage exceptionMessage = new ExceptionMessage(new Date(), exceptionDescription, exception);
+        return new ResponseEntity<>(exceptionMessage, new HttpHeaders(), HttpStatus.BAD_REQUEST);
+    }
 }

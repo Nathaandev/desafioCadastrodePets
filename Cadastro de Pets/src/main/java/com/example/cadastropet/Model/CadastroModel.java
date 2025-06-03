@@ -2,11 +2,14 @@ package com.example.cadastropet.Model;
 import com.example.cadastropet.Enum.CatOrDog;
 import com.example.cadastropet.Enum.MascOrFem;
 import com.example.cadastropet.dtos.CadastroRecordDTO;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity
 @Table(name = "Pets")
+@JsonPropertyOrder({"id", "name","age","address","weight", "gender", "type", "race"})
 public class CadastroModel implements Serializable {
     private static final long serialVersionUID = 1L;
     public static final String VALUE_NOT_INFORMED = "NOT INFORMED";
@@ -19,14 +22,23 @@ public class CadastroModel implements Serializable {
     private String age;
 
     @Transient
+    @JsonIgnore
     private String firstname;
+
+    @JsonIgnore
     @Transient
     private String lastname;
+
     @Transient
+    @JsonIgnore
     private String number;
+
+    @JsonIgnore
     @Transient
     private String city;
+
     @Transient
+    @JsonIgnore
     private String street;
 
     @Column(name = "name")

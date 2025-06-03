@@ -1,25 +1,16 @@
 package com.example.cadastropet.Service;
-import com.example.cadastropet.Enum.CatOrDog;
-import com.example.cadastropet.Enum.MascOrFem;
-import com.example.cadastropet.Exceptions.AgeHigherThan19Exception;
 import com.example.cadastropet.Exceptions.ExceptionsCheck;
-import com.example.cadastropet.Exceptions.InvalidPutMethodException;
 import com.example.cadastropet.Model.CadastroModel;
 import com.example.cadastropet.Repository.CadastroRepository;
 import com.example.cadastropet.dtos.CadastroRecordDTO;
-import jakarta.persistence.Transient;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.cache.CacheType;
-import org.springframework.data.domain.Example;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -29,7 +20,6 @@ import static com.example.cadastropet.Model.CadastroModel.VALUE_NOT_INFORMED;
 
 @Service
 public class CadastroService {
-    int active_filters = 0;
     CadastroModel cadastroModel;
     @Autowired
     CadastroRepository repository;
@@ -60,17 +50,21 @@ public class CadastroService {
     }
     public ResponseEntity<Object> Update(@PathVariable("id") Long id, @RequestBody @Valid CadastroRecordDTO cadastroRecordDTO){
         Optional<CadastroModel> pet = repository.findById(id);
+        var cadastroModel = new CadastroModel();
         if(pet.isEmpty()){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
-        var update = pet.get();
-        exceptionsCheck.CheckPutMethodException(update.getType(), update.getGender(), cadastroRecordDTO);
-        BeanUtils.copyProperties(cadastroRecordDTO, update);
-
-        return ResponseEntity.status(HttpStatus.OK).body(repository.save(update));
+        cadastroModel = pet.get();
+        exceptionsCheck.CheckPutMethodException(cadastroModel.getType(), cadastroModel.getGender(), cadastroRecordDTO);
+        BeanUtils.copyProperties(cadastroRecordDTO, cadastroModel);
+        exceptionsCheck.CheckExceptionsSave(cadastroRecordDTO, cadastroModel);
+        cadastroModel.HandleEmptyFields(cadastroRecordDTO);
+        cadastroModel.setAddress(cadastroModel.GenerateFullAddress());
+        cadastroModel.setName(cadastroModel.GenerateName());
+        return ResponseEntity.status(HttpStatus.OK).body(repository.save(cadastroModel));
     }
     public ResponseEntity<List<CadastroModel>> GetPets(Long id, String firstname, String lastname, String address, String weight, String age, String gender, String type, String race){
-
+        int active_filters = 0;
         List<CadastroModel> pets = repository.findAll();
         List<CadastroModel> filters = pets.stream()
                 .filter(p -> id == null || p.getPetid().equals(id))
@@ -82,6 +76,7 @@ public class CadastroService {
                 .filter(p -> gender == null || p.getGender().name().equalsIgnoreCase(gender))
                 .filter(p -> type == null || p.getType().name().equalsIgnoreCase(type))
                 .filter(p -> race == null || p.getRace().equalsIgnoreCase(race))
+
 
                 .collect(Collectors.toList());
         if(id != null){
