@@ -65,7 +65,7 @@ Senha: rootd
 
 As configurações estão no arquivo application.properties e no docker-compose.yml.
 
-📤 Modelo JSON para o POST /pets (via Postman)
+📤 Modelo JSON
 
 ```json
 {
