@@ -15,9 +15,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Exception" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -69,6 +70,9 @@
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="CreateBuilderDialog.RecentsKey">
+      <recent name="com.example.cadastropet.Model" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.example.cadastropet.Exceptions" />
@@ -201,7 +205,7 @@
       <workItem from="1755030634457" duration="1294000" />
       <workItem from="1755071704055" duration="1304000" />
       <workItem from="1755108212143" duration="665000" />
-      <workItem from="1755127385379" duration="3230000" />
+      <workItem from="1755127385379" duration="7387000" />
     </task>
     <servers />
   </component>
