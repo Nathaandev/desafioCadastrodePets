@@ -13,11 +13,9 @@ import java.util.List;
 @RequestMapping("/api")
 public class CadastroController {
 
-
     @Autowired
     CadastroService service;
-    @Autowired
-    private CadastroService cadastroService;
+
 
     @PostMapping("/cadastro")
     public ResponseEntity<CadastroModel> save(@RequestBody @Valid CadastroRecordDTO cadastroRecordDTO){
@@ -46,6 +44,6 @@ public class CadastroController {
             @RequestParam(required = false) String race
 
     ) {
-        return cadastroService.GetPets(id, firstname, lastname ,address, weight, age, gender, type, race);
+        return service.GetPets(id, firstname, lastname ,address, weight, age, gender, type, race);
     }
 }

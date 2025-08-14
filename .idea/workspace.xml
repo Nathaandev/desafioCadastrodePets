@@ -18,8 +18,8 @@
         <option value="Exception" />
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -207,7 +207,7 @@
       <workItem from="1755071704055" duration="1304000" />
       <workItem from="1755108212143" duration="665000" />
       <workItem from="1755127385379" duration="7758000" />
-      <workItem from="1755189051752" duration="7887000" />
+      <workItem from="1755189051752" duration="10667000" />
     </task>
     <servers />
   </component>
