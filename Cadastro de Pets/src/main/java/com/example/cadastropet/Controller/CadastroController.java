@@ -23,11 +23,6 @@ public class CadastroController {
     public ResponseEntity<CadastroModel> save(@RequestBody @Valid CadastroRecordDTO cadastroRecordDTO){
         return service.save(cadastroRecordDTO);
     }
-    @GetMapping("/GetAll")
-    public ResponseEntity<List<CadastroModel>> getAll(){
-        return service.getAll();
-    }
-
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> Delete(@PathVariable Long id){
         return service.DeleteById(id);
@@ -37,6 +32,7 @@ public class CadastroController {
     public ResponseEntity<Object> Update(@PathVariable("id") Long id, @RequestBody @Valid CadastroRecordDTO cadastroRecordDTO){
         return service.Update(id, cadastroRecordDTO);
     }
+
     @GetMapping("/pets")
     public ResponseEntity<List<CadastroModel>> getPets(
             @RequestParam(required = false) Long id,
