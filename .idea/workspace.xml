@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf4fc3af-33d3-497c-88f8-6dbee9240e6c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Exceptions/ApiExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Response/ExceptionMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cadastro de Pets/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Controller/CadastroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Controller/CadastroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Model/CadastroModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Model/CadastroModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Repository/CadastroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Repository/CadastroRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Service/CadastroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/Service/CadastroService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/dtos/CadastroRecordDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/src/main/java/com/example/cadastropet/dtos/CadastroRecordDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cadastro de Pets/target/classes/com/example/cadastropet/Controller/CadastroController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/target/classes/com/example/cadastropet/Controller/CadastroController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cadastro de Pets/target/classes/com/example/cadastropet/Model/CadastroModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/target/classes/com/example/cadastropet/Model/CadastroModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cadastro de Pets/target/classes/com/example/cadastropet/Repository/CadastroRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/target/classes/com/example/cadastropet/Repository/CadastroRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cadastro de Pets/target/classes/com/example/cadastropet/Service/CadastroService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/target/classes/com/example/cadastropet/Service/CadastroService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cadastro de Pets/target/classes/com/example/cadastropet/dtos/CadastroRecordDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Cadastro de Pets/target/classes/com/example/cadastropet/dtos/CadastroRecordDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +22,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Cadastro de Pets" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -49,35 +37,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.CadastroServiceTest.FindAll.executor": "Run",
-    "JUnit.CadastroServiceTest.executor": "Run",
-    "JUnit.CadastropetApplicationTests.executor": "Run",
-    "JUnit.ExceptionsCheckTest.ShouldThrowExceptionWhenAgeIsHigherThan19.executor": "Run",
-    "JUnit.ExceptionsCheckTest.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.CadastropetApplication.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/natab/Projetos",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.CadastroServiceTest.FindAll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CadastroServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CadastropetApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExceptionsCheckTest.ShouldThrowExceptionWhenAgeIsHigherThan19.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExceptionsCheckTest.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.CadastropetApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/natab/IdeaProjects/desafioCadastro&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -208,6 +196,12 @@
       <workItem from="1748650004644" duration="5008000" />
       <workItem from="1748897317741" duration="14020000" />
       <workItem from="1748971233124" duration="7611000" />
+      <workItem from="1754959690978" duration="244000" />
+      <workItem from="1754959975855" duration="601000" />
+      <workItem from="1755030634457" duration="1294000" />
+      <workItem from="1755071704055" duration="1304000" />
+      <workItem from="1755108212143" duration="665000" />
+      <workItem from="1755127385379" duration="1718000" />
     </task>
     <servers />
   </component>
