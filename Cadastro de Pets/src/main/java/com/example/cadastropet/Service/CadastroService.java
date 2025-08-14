@@ -20,7 +20,6 @@ import static com.example.cadastropet.Model.CadastroModel.VALUE_NOT_INFORMED;
 
 @Service
 public class CadastroService {
-    CadastroModel cadastroModel;
     @Autowired
     CadastroRepository repository;
     ExceptionsCheck exceptionsCheck = new ExceptionsCheck();

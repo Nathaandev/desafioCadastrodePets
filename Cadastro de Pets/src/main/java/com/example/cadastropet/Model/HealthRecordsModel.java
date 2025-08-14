@@ -17,7 +17,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class HealthRecords {
+public class HealthRecordsModel {
 
     @Id
     private String id;
