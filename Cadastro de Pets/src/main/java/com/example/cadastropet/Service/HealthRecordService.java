@@ -15,9 +15,6 @@ public class HealthRecordService {
 
     @Autowired
     HealthRecordsRepository healthRecordsRepository;
-    HealthRecordsModel healthRecordsModel;
-    HealthRecordsDTO healthRecordsDTO;
-
 
     public ResponseEntity<HealthRecordsModel> save(@RequestBody HealthRecordsDTO healthRecordsDTO){
         var healthRecordsModel = new HealthRecordsModel();
