@@ -15,11 +15,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Exception" />
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Record" />
         <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
@@ -210,7 +210,7 @@
       <workItem from="1755189051752" duration="11265000" />
       <workItem from="1755536840272" duration="1879000" />
       <workItem from="1755643971130" duration="2344000" />
-      <workItem from="1755716464070" duration="2353000" />
+      <workItem from="1755716464070" duration="9431000" />
     </task>
     <servers />
   </component>

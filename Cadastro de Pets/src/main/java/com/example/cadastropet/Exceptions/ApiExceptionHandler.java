@@ -49,4 +49,11 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
         ExceptionMessage exceptionMessage = new ExceptionMessage(new Date(), exceptionDescription, exception);
         return new ResponseEntity<>(exceptionMessage, new HttpHeaders(), HttpStatus.BAD_REQUEST);
     }
+    @ExceptionHandler(value = InvalidPetIDException.class)
+    public ResponseEntity<Object> InvalidPetID(Exception e, WebRequest request){
+        String exception = e.getClass().getSimpleName();
+        String exceptionDescription = e.getLocalizedMessage();
+        ExceptionMessage exceptionMessage = new ExceptionMessage(new Date(), exceptionDescription, exception);
+        return new ResponseEntity<>(exceptionMessage, new HttpHeaders(), HttpStatus.NOT_FOUND);
+    }
 }

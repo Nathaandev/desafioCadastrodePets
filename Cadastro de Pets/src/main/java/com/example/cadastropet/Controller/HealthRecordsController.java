@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/records")
-public class CadastroRecordsController {
+public class HealthRecordsController {
     @Autowired
     HealthRecordService healthRecordService;
 

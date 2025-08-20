@@ -3,8 +3,9 @@ import com.example.cadastropet.Enum.CatOrDog;
 import com.example.cadastropet.Enum.MascOrFem;
 import com.example.cadastropet.Model.CadastroModel;
 import com.example.cadastropet.dtos.CadastroRecordDTO;
+import org.springframework.stereotype.Component;
 
-
+@Component
 public class ExceptionsCheck {
     static final int MAX_FILTER_QUANTITY = 2;
 

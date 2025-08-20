@@ -1,5 +1,6 @@
 package com.example.cadastropet.Service;
 import com.example.cadastropet.Exceptions.ExceptionsCheck;
+import com.example.cadastropet.Exceptions.HealthExceptionsCheck;
 import com.example.cadastropet.Model.CadastroModel;
 import com.example.cadastropet.Repository.CadastroRepository;
 import com.example.cadastropet.dtos.CadastroRecordDTO;
@@ -22,7 +23,12 @@ import static com.example.cadastropet.Model.CadastroModel.VALUE_NOT_INFORMED;
 public class CadastroService {
     @Autowired
     CadastroRepository repository;
-    ExceptionsCheck exceptionsCheck = new ExceptionsCheck();
+
+    private final ExceptionsCheck exceptionsCheck;
+
+    public CadastroService(ExceptionsCheck exceptionsCheck) {
+        this.exceptionsCheck = exceptionsCheck;
+    }
 
     public ResponseEntity<CadastroModel> save(@RequestBody @Valid CadastroRecordDTO cadastroRecordDTO){
         var cadastroModel = new CadastroModel();
