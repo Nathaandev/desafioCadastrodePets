@@ -13,7 +13,7 @@ public class HealthExceptionsCheck {
 
     public void CheckIfIdExists(Long petId){
         var idExists = cadastroRepository.existsById(petId);
-       if (idExists == false) {
+       if (!idExists) {
             throw new InvalidPetIDException("There is no pet with this ID in the database.");
        }
     }
