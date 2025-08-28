@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/records")
+@RequestMapping("/records")
 public class HealthRecordsController {
     @Autowired
     HealthRecordService healthRecordService;
@@ -22,7 +22,7 @@ public class HealthRecordsController {
     public ResponseEntity<HealthRecordsModel> save(@RequestBody HealthRecordsDTO healthRecordsDTO){
         return healthRecordService.save(healthRecordsDTO);
     }
-    @PutMapping("/update/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<HealthRecordsModel> Update(@PathVariable("id") String id, @RequestBody HealthRecordsDTO healthRecordsDTO){
         return healthRecordService.Update(id, healthRecordsDTO);
     }
