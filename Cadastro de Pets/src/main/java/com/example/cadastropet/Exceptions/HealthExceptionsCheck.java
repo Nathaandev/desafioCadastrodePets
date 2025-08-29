@@ -17,5 +17,8 @@ public class HealthExceptionsCheck {
         if (!cadastroRepository.existsById(healthRecordsModel.getPetId())) {
             throw new InvalidPetIDException("The pet ID does not exist.");
         }
+        if (healthRecordsModel.getVisitDate() == null) {
+            throw new IllegalArgumentException("The date can't be null.");
+        }
     }
 }
