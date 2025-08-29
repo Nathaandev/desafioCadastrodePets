@@ -20,5 +20,8 @@ public class HealthExceptionsCheck {
         if (healthRecordsModel.getVisitDate() == null) {
             throw new IllegalArgumentException("The date can't be null.");
         }
+        if (healthRecordsModel.getDiagnosis() == null || healthRecordsModel.getDiagnosis().trim().isEmpty() || !healthRecordsModel.getDiagnosis().matches("[a-zA-Z ]*")) {
+            throw new IllegalArgumentException("The diagnosis can't be empty or have numbers or special characters.");
+        }
     }
 }
