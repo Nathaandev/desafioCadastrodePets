@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf4fc3af-33d3-497c-88f8-6dbee9240e6c" name="Changes" comment="" />
+    <list default="true" id="bf4fc3af-33d3-497c-88f8-6dbee9240e6c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,9 +17,9 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
-        <option value="Record" />
         <option value="Class" />
         <option value="Exception" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -213,7 +215,7 @@
       <workItem from="1755877887739" duration="605000" />
       <workItem from="1756240275483" duration="1500000" />
       <workItem from="1756303257293" duration="1805000" />
-      <workItem from="1756423752149" duration="3774000" />
+      <workItem from="1756423752149" duration="6247000" />
     </task>
     <servers />
   </component>

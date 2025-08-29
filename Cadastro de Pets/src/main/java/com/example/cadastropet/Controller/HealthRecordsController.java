@@ -2,7 +2,8 @@ package com.example.cadastropet.Controller;
 
 import com.example.cadastropet.Model.HealthRecordsModel;
 import com.example.cadastropet.Service.HealthRecordService;
-import com.example.cadastropet.dtos.HealthRecordsDTO;
+import com.example.cadastropet.dtos.HealthRecordsSaveDTO;
+import com.example.cadastropet.dtos.HealthRecordsUpdateDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,11 +20,11 @@ public class HealthRecordsController {
     HealthRecordService healthRecordService;
 
     @PostMapping
-    public ResponseEntity<HealthRecordsModel> save(@RequestBody HealthRecordsDTO healthRecordsDTO){
-        return healthRecordService.save(healthRecordsDTO);
+    public ResponseEntity<HealthRecordsModel> save(@RequestBody HealthRecordsSaveDTO healthRecordsSaveDTO){
+        return healthRecordService.save(healthRecordsSaveDTO);
     }
     @PutMapping("/{id}")
-    public ResponseEntity<HealthRecordsModel> Update(@PathVariable("id") String id, @RequestBody HealthRecordsDTO healthRecordsDTO){
-        return healthRecordService.Update(id, healthRecordsDTO);
+    public ResponseEntity<HealthRecordsModel> Update(@PathVariable("id") String id, @RequestBody HealthRecordsUpdateDTO healthRecordsUpdateDTO){
+        return healthRecordService.Update(id, healthRecordsUpdateDTO);
     }
 }

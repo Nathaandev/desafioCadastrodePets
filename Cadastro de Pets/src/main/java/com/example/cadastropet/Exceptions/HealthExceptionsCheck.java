@@ -13,11 +13,11 @@ public class HealthExceptionsCheck {
     private final CadastroRepository cadastroRepository;
 
 
-    public void checkExceptionsSave(HealthRecordsModel healthRecordsModel) {
+    public void checkExceptions(HealthRecordsModel healthRecordsModel, long petId) {
         if (!cadastroRepository.existsById(healthRecordsModel.getPetId())) {
             throw new InvalidPetIDException("The pet ID does not exist.");
         }
-        
+
         if (healthRecordsModel.getVisitDate() == null) {
             throw new IllegalArgumentException("The date can't be null.");
         }
@@ -37,5 +37,6 @@ public class HealthExceptionsCheck {
         if (healthRecordsModel.getReasonForVisit() == null || healthRecordsModel.getReasonForVisit().trim().isEmpty() || !healthRecordsModel.getReasonForVisit().matches("[a-zA-Z\\d ]*")) {
             throw new IllegalArgumentException("The reason for visit can't be empty or have special characters.");
         }
+
     }
 }
