@@ -23,5 +23,8 @@ public class HealthExceptionsCheck {
         if (healthRecordsModel.getDiagnosis() == null || healthRecordsModel.getDiagnosis().trim().isEmpty() || !healthRecordsModel.getDiagnosis().matches("[a-zA-Z ]*")) {
             throw new IllegalArgumentException("The diagnosis can't be empty or have numbers or special characters.");
         }
+        if (healthRecordsModel.getVeterinaryName() == null || healthRecordsModel.getVeterinaryName().trim().isEmpty() || !healthRecordsModel.getVeterinaryName().matches("[a-zA-Z ]*")) {
+            throw new IllegalArgumentException("The veterinary name can't be empty or have numbers or special characters.");
+        }
     }
 }
