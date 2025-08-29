@@ -1,5 +1,6 @@
 package com.example.cadastropet.Exceptions;
 
+import com.example.cadastropet.Model.HealthRecordsModel;
 import com.example.cadastropet.Repository.CadastroRepository;
 import org.springframework.stereotype.Component;
 
@@ -11,10 +12,10 @@ public class HealthExceptionsCheck {
 
     private final CadastroRepository cadastroRepository;
 
-    public void CheckIfIdExists(Long petId){
-        var idExists = cadastroRepository.existsById(petId);
-       if (!idExists) {
-            throw new InvalidPetIDException("There is no pet with this ID in the database.");
-       }
+
+    public void checkExceptionsSave(HealthRecordsModel healthRecordsModel) {
+        if (!cadastroRepository.existsById(healthRecordsModel.getPetId())) {
+            throw new InvalidPetIDException("The pet ID does not exist.");
+        }
     }
 }

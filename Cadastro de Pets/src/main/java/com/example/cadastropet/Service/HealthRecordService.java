@@ -32,7 +32,7 @@ public class HealthRecordService {
     public ResponseEntity<HealthRecordsModel> save(@RequestBody HealthRecordsDTO healthRecordsDTO){
         var healthRecordsModel = new HealthRecordsModel();
         BeanUtils.copyProperties(healthRecordsDTO, healthRecordsModel);
-        healthExceptionsCheck.CheckIfIdExists(healthRecordsModel.getPetId());
+        healthExceptionsCheck.checkExceptionsSave(healthRecordsModel);
         return ResponseEntity.status(HttpStatus.CREATED).body(healthRecordsRepository.save(healthRecordsModel));
     }
     public ResponseEntity<HealthRecordsModel> Update(@PathVariable("id") String id, @RequestBody HealthRecordsDTO healthRecordsDTO){
